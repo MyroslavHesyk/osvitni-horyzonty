@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null;
+    }
+
+    match /submissions/{submissionId} {
+      // Учасники можуть додавати заявки без входу.
+      allow create: if
+        request.resource.data.name is string &&
+        request.resource.data.name.size() >= 2 &&
+        request.resource.data.name.size() <= 120 &&
+        request.resource.data.postUrl is string &&
+        request.resource.data.postUrl.size() <= 600 &&
+        request.resource.data.platform in ['Facebook', 'Instagram'] &&
+        request.resource.data.dayId in ['2026-07-11', '2026-07-12', '2026-07-13', '2026-07-14', '2026-07-15', '2026-07-16'];
+
+      // Читати заявки може тільки адміністратор, який увійшов через Firebase Auth.
+      allow read, update, delete: if isAdmin();
+    }
+
+    match /draws/{drawId} {
+      // Розіграші створює і читає тільки адміністратор.
+      allow read, create, update, delete: if isAdmin();
+    }
+  }
+}

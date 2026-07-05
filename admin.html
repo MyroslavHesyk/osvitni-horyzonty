@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Адмін · Освітні горизонти 2026</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-page">
+  <nav class="nav nav--solid container">
+    <a class="brand" href="index.html"><span class="brand__mark">ОГ</span><span>Освітні горизонти</span></a>
+    <div class="nav__links">
+      <a href="index.html">Головна</a>
+      <a href="schedule.html">Розклад</a>
+    </div>
+  </nav>
+
+  <main class="section container">
+    <div class="section-head">
+      <p class="eyebrow">Адміністративна сторінка</p>
+      <h1>Заявки, активність і розіграші</h1>
+      <p>Тут можна бачити додані пости, визначати найактивніших учасників і запускати денні або загальний розіграш.</p>
+      <p class="small-muted">Статус входу: <strong id="admin-email">перевіряємо…</strong></p>
+      <p id="admin-status" class="form-status"></p>
+      <p class="admin-hint small-muted">Демо-режим: <code>admin@osvitni.local</code> / <code>Oh2026!</code></p>
+    </div>
+
+    <section class="admin-login">
+      <form id="login-form" class="form-card form-card--login">
+        <label>
+          Email адміністратора
+          <input name="email" type="email" placeholder="admin@osvitni.local" autocomplete="username" required>
+        </label>
+        <label>
+          Пароль
+          <input name="password" type="password" required>
+        </label>
+        <button class="btn" type="submit">Увійти</button>
+      </form>
+      <button id="logout-button" class="btn btn--ghost" type="button">Вийти</button>
+    </section>
+
+    <section class="admin-content">
+      <div class="stats-grid">
+        <article class="stat-card"><span id="stat-total">0</span><p>усіх постів</p></article>
+        <article class="stat-card"><span id="stat-unique">0</span><p>унікальних учасників</p></article>
+        <article class="stat-card"><span id="stat-days">0</span><p>днів з активністю</p></article>
+      </div>
+
+      <div id="by-day" class="by-day"></div>
+
+      <section class="panel">
+        <div class="panel__head">
+          <div>
+            <p class="eyebrow">Розіграші</p>
+            <h2>Випадковий вибір переможця</h2>
+          </div>
+          <div class="panel__actions">
+            <button id="refresh-data" class="btn btn--soft" type="button">Оновити дані</button>
+            <button id="export-csv" class="btn btn--soft" type="button">Експорт CSV</button>
+          </div>
+        </div>
+        <div id="daily-draws" class="draw-buttons"></div>
+        <button id="final-draw" class="btn btn--wide" type="button">Загальний розіграш серед усіх постів</button>
+        <div id="winner-box"></div>
+      </section>
+
+      <section class="panel">
+        <p class="eyebrow">Найактивніші</p>
+        <h2>Топ учасників за кількістю доданих постів</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>№</th><th>Учасник</th><th>Постів</th><th>Приклад</th></tr></thead>
+            <tbody id="top-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <p class="eyebrow">Усі заявки</p>
+        <h2>Додані посилання на пости</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Учасник</th><th>День</th><th>Платформа</th><th>Пост</th><th>Дата додавання</th></tr></thead>
+            <tbody id="submissions-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <p class="eyebrow">Історія</p>
+        <h2>Проведені розіграші</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Тип</th><th>День</th><th>Переможець</th><th>Пост</th><th>Коли</th></tr></thead>
+            <tbody id="draws-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

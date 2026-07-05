@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Освітні горизонти 2026 — соцмережевий челендж</title>
+  <meta name="description" content="Соцмережевий челендж учасників ХІІ Всеукраїнської літньої школи Освітні горизонти: літо професійного розвитку.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav container">
+      <a class="brand" href="index.html" aria-label="На головну">
+        <span class="brand__mark">ЛШ</span>
+        <span>Освітні горизонти</span>
+      </a>
+      <div class="nav__links">
+        <a href="#about">Про активність</a>
+        <a href="#today">День</a>
+        <a href="#submit">Додати пост</a>
+        <a href="schedule.html">Розклад</a>
+       
+      </div>
+    </nav>
+
+    <div class="hero__image" role="img" aria-label="Карпати, контент, соцмережі та професійний розвиток"></div>
+
+    <section class="hero__content container">
+      <p class="eyebrow">11–16 липня 2026 · с. Лумшори · Закарпаття</p>
+      <h1>Соцмережевий челендж учасників Літньої школи</h1>
+      <p class="hero__lead">Стаємо амбасадорами професійного розвитку, ділимося атмосферою, ідеями, інсайтами та показуємо, чим живуть «Освітні горизонти».</p>
+      <div class="hero__actions">
+        <a class="btn" href="#submit">Додати свій допис</a>
+        <a class="btn btn--ghost" href="#days">Переглянути теми днів</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="about" class="section container two-cols">
+      <div>
+        <p class="eyebrow">Головна ідея</p>
+        <h2>Публікуємо, надихаємо, створюємо спільну цифрову історію</h2>
+        <p>Щодня учасники публікують один допис у Facebook або Instagram: фото, карусель, колаж, цитату чи коротку історію з особистим висновком. Головне — показати не тільки подію, а й власний професійний інсайт.</p>
+        <p class="notice">За активну участь передбачені подарунки. Організатори відзначатимуть найактивніших учасників, а також розігруватимуть подарунки випадковим чином. Деталі повідомлять очно під час Літньої школи.</p>
+      </div>
+      <aside class="info-card">
+        <span class="eyebrow">Обов’язкові хештеги</span>
+        <strong id="main-hashtag">#ОсвітніГоризонти2026</strong> <strong id="main-hashtag">#ІМЗО #Астро</strong>
+        <p>Додавайте їх до кожного допису разом із декількома особливими хештегами конкретного дня.</p>
+      </aside>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container steps-grid">
+        <article class="step-card">
+          <span>01</span>
+          <h3>Створіть допис</h3>
+          <p>Оберіть фото, карусель, колаж або відео і додайте короткий особистий текст.</p>
+        </article>
+        <article class="step-card">
+          <span>02</span>
+          <h3>Додайте хештеги</h3>
+          <p>Використайте загальні хештеги і тематичні хештеги дня.</p>
+        </article>
+        <article class="step-card">
+          <span>03</span>
+          <h3>Зареєструйте посилання</h3>
+          <p>Вставте URL свого поста у форму на сайті, щоб взяти участь у відзнаках і розіграшах.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="today" class="section container today-card">
+      <div class="today-card__label">
+        <span>Актуальний день</span>
+        <strong id="active-day-date">11 липня</strong>
+      </div>
+      <div>
+        <p class="eyebrow">Завдання дня</p>
+        <h2 id="active-day-title">День приїзду і першого враження</h2>
+        <p id="active-day-lead" class="lead"></p>
+        <p id="active-day-task"></p>
+        <div id="active-day-tags" class="tag-list tag-list--large"></div>
+      </div>
+      <div class="ideas-box">
+        <h3>Ідеї для допису</h3>
+        <ul id="active-day-ideas"></ul>
+      </div>
+    </section>
+
+    <section id="submit" class="section container submit-grid">
+      <div>
+        <p class="eyebrow">Форма учасника</p>
+        <h2>Додайте посилання на свій пост</h2>
+        <p>Після публікації допису у Facebook або Instagram вставте посилання тут. Так організатори зможуть бачити активність, визначати найактивніших учасників і проводити розіграші.</p>
+        <p id="mode-notice" class="small-muted"></p>
+      </div>
+
+      <form id="submission-form" class="form-card">
+        <label>
+          Ваше ім’я та прізвище
+          <input name="name" autocomplete="name" placeholder="Наприклад: Олена Тимошенко" required>
+        </label>
+        <label>
+          День активності
+          <select id="submission-day" name="day" required></select>
+        </label>
+        <label>
+          Платформа
+          <select name="platform" required>
+            <option value="Facebook">Facebook</option>
+            <option value="Instagram">Instagram</option>
+          </select>
+        </label>
+        <label>
+          Посилання на допис
+          <input name="postUrl" type="url" placeholder="https://facebook.com/... або https://instagram.com/..." required>
+        </label>
+        <button class="btn" type="submit">Додати мій допис</button>
+        <p id="form-status" class="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <section id="days" class="section container">
+      <div class="section-head">
+        <p class="eyebrow">Теми марафону</p>
+        <h2>Шість днів — шість освітніх історій</h2>
+      </div>
+      <div id="days-grid" class="days-grid"></div>
+    </section>
+
+    <section class="section section--deep">
+      <div class="container two-cols two-cols--center">
+        <div>
+          <p class="eyebrow">Посилання</p>
+          <h2>Корисні ресурси</h2>
+          <p>Долучайтеся до комунікації, стежте за інформацією організаторів і поширюйте дописи з офіційним хештегом.</p>
+        </div>
+        <div class="link-grid">
+          <a id="telegram-link" href="#" target="_blank" rel="noopener">Telegram-група</a>
+          <a id="imzo-link" href="#" target="_blank" rel="noopener">ІМЗО</a>
+          <a id="astro-link" href="#" target="_blank" rel="noopener">АСтРО</a>
+          <a id="people-link" href="#" target="_blank" rel="noopener">Освітня платформа «4PEOPLE»</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© 2026 · ХІІ Всеукраїнська літня школа «Освітні горизонти: літо професійного розвитку»</p>
+    <a href="admin.html">Адміністративна сторінка</a>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
