@@ -18,10 +18,7 @@ export const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 // Змініть перед публікацією або підключіть Firebase Auth для продакшену.
-export const LOCAL_ADMIN = {
-  email: "gesick2000@gmail.com",
-  password: "1111"
-};
+
 
 export const EVENT_SETTINGS = {
   mainHashtag: "#ОсвітніГоризонти2026",
