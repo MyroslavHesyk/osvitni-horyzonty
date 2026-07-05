@@ -21,8 +21,9 @@ service cloud.firestore {
     }
 
     match /draws/{drawId} {
-      // Розіграші створює і читає тільки адміністратор.
-      allow read, create, update, delete: if isAdmin();
+      // Переможців можуть переглядати всі відвідувачі сайту.
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
     }
   }
 }

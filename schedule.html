@@ -2,17 +2,21 @@
 <html lang="uk">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Розклад · Освітні горизонти 2026</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <nav class="nav nav--solid container">
     <a class="brand" href="index.html"><span class="brand__mark">ЛШ</span><span>Освітні горизонти</span></a>
-    <div class="nav__links">
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Відкрити меню">
+      <span></span><span></span><span></span>
+    </button>
+    <div id="site-nav" class="nav__links">
       <a href="index.html">Головна</a>
       <a href="index.html#submit">Додати пост</a>
-      <a href="admin.html">Адмін</a>
+      <a href="winners.html">Переможці</a>
+      <a href="schedule.html" aria-current="page">Розклад</a>
     </div>
   </nav>
 
@@ -39,5 +43,15 @@
       </article>
     </div>
   </main>
+
+  <footer class="footer container">
+    <p>© 2026 · Освітні горизонти</p>
+    <div class="footer__links">
+      <a href="winners.html">Переможці</a>
+      <a href="admin.html">Адмін</a>
+    </div>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
 </body>
 </html>

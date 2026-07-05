@@ -1,5 +1,5 @@
 import { days } from "./data.js";
-import { EVENT_SETTINGS, LOCAL_ADMIN } from "./config.js";
+import { EVENT_SETTINGS } from "./config.js";
 import { initFirebase, getFirebaseState } from "./firebase.js";
 
 const $ = (selector) => document.querySelector(selector);
@@ -302,16 +302,7 @@ function initLogin() {
       return;
     }
 
-    if (email === LOCAL_ADMIN.email && password === LOCAL_ADMIN.password) {
-      adminUser = { email };
-      setLocalSession(email);
-      setLoggedIn(true, email);
-      setStatus("Демо-вхід виконано. Показуються заявки з цього браузера.", "success");
-      loginForm.reset();
-      return;
-    }
-
-    setStatus("Невірний email або пароль. Для демо використайте тестові дані з config.js.", "error");
+    setStatus("Локальний вхід недоступний: сайт працює через Firebase.", "error");
   });
 
   logoutButton?.addEventListener("click", async () => {

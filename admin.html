@@ -8,9 +8,13 @@
 </head>
 <body class="admin-page">
   <nav class="nav nav--solid container">
-    <a class="brand" href="index.html"><span class="brand__mark">ОГ</span><span>Освітні горизонти</span></a>
-    <div class="nav__links">
+    <a class="brand" href="index.html"><span class="brand__mark">ЛШ</span><span>Освітні горизонти</span></a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Відкрити меню">
+      <span></span><span></span><span></span>
+    </button>
+    <div id="site-nav" class="nav__links">
       <a href="index.html">Головна</a>
+      <a href="winners.html">Переможці</a>
       <a href="schedule.html">Розклад</a>
     </div>
   </nav>
@@ -22,14 +26,13 @@
       <p>Тут можна бачити додані пости, визначати найактивніших учасників і запускати денні або загальний розіграш.</p>
       <p class="small-muted">Статус входу: <strong id="admin-email">перевіряємо…</strong></p>
       <p id="admin-status" class="form-status"></p>
-      <p class="admin-hint small-muted">Демо-режим: <code>admin@osvitni.local</code> / <code>Oh2026!</code></p>
     </div>
 
     <section class="admin-login">
       <form id="login-form" class="form-card form-card--login">
         <label>
           Email адміністратора
-          <input name="email" type="email" placeholder="admin@osvitni.local" autocomplete="username" required>
+          <input name="email" type="email" placeholder="organizer@example.com" autocomplete="username" required>
         </label>
         <label>
           Пароль
@@ -100,6 +103,7 @@
     </section>
   </main>
 
+  <script type="module" src="js/nav.js"></script>
   <script type="module" src="js/admin.js"></script>
 </body>
 </html>

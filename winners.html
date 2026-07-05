@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Переможці · Освітні горизонти 2026</title>
+  <meta name="description" content="Переможці денних та загального розіграшів соцмережевого челенджу Літньої школи Освітні горизонти.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="winners-page">
+  <header class="page-hero page-hero--winners">
+    <nav class="nav nav--overlay container">
+      <a class="brand" href="index.html" aria-label="На головну">
+        <span class="brand__mark">ЛШ</span>
+        <span>Освітні горизонти</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Відкрити меню">
+        <span></span><span></span><span></span>
+      </button>
+      <div id="site-nav" class="nav__links">
+        <a href="index.html">Головна</a>
+        <a href="index.html#submit">Додати пост</a>
+        <a href="winners.html" aria-current="page">Переможці</a>
+        <a href="schedule.html">Розклад</a>
+      </div>
+    </nav>
+
+    <section class="page-hero__content container">
+      <p class="eyebrow">Розіграші челенджу</p>
+      <h1>Переможці соцмережевого марафону</h1>
+      <p class="lead">Тут з’являються учасники, яких обрано випадковим чином у денних розіграшах та у фіналі Літньої школи.</p>
+      <p id="winners-status" class="form-status form-status--info"></p>
+    </section>
+  </header>
+
+  <main class="winners-main">
+    <div id="winners-loading" class="winners-loading container">
+      <span class="winners-loading__dot"></span>
+      <span>Завантажуємо переможців…</span>
+    </div>
+
+    <div id="winners-empty" class="winners-empty container" hidden>
+      <div class="winners-empty__card">
+        <span class="winners-empty__icon" aria-hidden="true">🏆</span>
+        <h2>Переможців ще немає</h2>
+        <p>Як тільки організатори проведуть розіграші, тут з’являться імена та посилання на дописи.</p>
+        <a class="btn" href="index.html#submit">Долучитися до челенджу</a>
+      </div>
+    </div>
+
+    <section class="section container winners-section">
+      <div class="section-head">
+        <p class="eyebrow">Фінал</p>
+        <h2>Головний переможець</h2>
+        <p class="small-muted">Учасник, обраний у загальному розіграші серед усіх дописів.</p>
+      </div>
+      <div id="final-winner" class="winners-final"></div>
+    </section>
+
+    <section class="section section--soft winners-section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Щоденні розіграші</p>
+          <h2>Переможці за днями</h2>
+          <p class="small-muted">Показано <strong id="winners-count">0</strong> переможців. Оновлюється після кожного розіграшу.</p>
+        </div>
+        <div id="daily-winners" class="winners-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© 2026 · ХІІ Всеукраїнська літня школа «Освітні горизонти»</p>
+    <a href="index.html">На головну</a>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/winners.js"></script>
+</body>
+</html>
