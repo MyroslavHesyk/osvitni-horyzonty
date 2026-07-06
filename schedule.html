@@ -6,7 +6,7 @@
   <title>Розклад · Освітні горизонти 2026</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="schedule-body">
   <nav class="nav nav--solid container">
     <a class="brand" href="index.html"><span class="brand__mark">ЛШ</span><span>Освітні горизонти</span></a>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Відкрити меню">
@@ -20,28 +20,34 @@
     </div>
   </nav>
 
-  <main class="section container schedule-page">
-    <p class="eyebrow">Сторінка в розробці</p>
-    <h1>Розклад Літньої школи</h1>
-    <p class="lead">Тут можна буде додати детальний розклад занять, модулів, практичних активностей, зустрічей і нагадувань для учасників.</p>
+  <main class="schedule-page schedule-page--modern">
+    <header class="schedule-hero schedule-hero--index container">
+      <div class="schedule-hero__content">
+        <p class="eyebrow">Розклад Літньої школи</p>
+        <h1>Оберіть свою групу</h1>
+        <p class="lead">Учасники поділені на дві групи, тому для кожної групи зроблено окрему сторінку з повним розкладом: день, час, назва події та відповідальні спікери.</p>
+      </div>
+      <aside class="schedule-hero__panel" aria-label="Загальна інформація">
+        <strong>Лумшори · 2026</strong>
+        <p>Комплексна програма ХІІ Всеукраїнської Літньої школи «Освітні горизонти: літо професійного розвитку».</p>
+      </aside>
+    </header>
 
-    <div class="schedule-placeholder">
-      <article>
-        <span>09:30</span>
-        <h3>Ранковий старт / організаційний блок</h3>
-        <p>Місце для уточнення програми.</p>
-      </article>
-      <article>
-        <span>10:00–15:30</span>
-        <h3>Тематичні модулі та майстер-класи</h3>
-        <p>Цифрове лідерство, ШІ, STEM, інклюзія, комунікація, лідерство.</p>
-      </article>
-      <article>
-        <span>16:00–18:00</span>
-        <h3>Практичний модуль «НаХаН»</h3>
-        <p>Командні вправи, стресостійкість, прийняття рішень і саморегуляція.</p>
-      </article>
-    </div>
+    <section class="container group-choice-grid" aria-label="Вибір групи">
+      <article class="group-choice group-choice--1">
+          <div class="group-choice__badge">Група № 1</div>
+          <h2>11 липня 2026 р. — 15 липня 2026 р.</h2>
+          <p>Окремий розклад для учасників групи № 1 з подіями по днях, годинах, темах і тренерах.</p>
+          <ul><li>Навчальний тренінг · Управління емоціями: власна саморегуляція та розуміння поведінки людей</li><li>Проєкт «НаХаН»: тренінг прийняття рішень у стресових умовах. Командна гра зі сценарними вправами з безпечної взаємодії та домедичної підготовки</li><li>Дослідження і проєктування, як основи STEM</li></ul>
+          <a class="btn" href="schedule-group-1.html">Відкрити розклад групи № 1</a>
+        </article><article class="group-choice group-choice--2">
+          <div class="group-choice__badge">Група № 2</div>
+          <h2>12 липня 2026 р. — 16 липня 2026 р.</h2>
+          <p>Окремий розклад для учасників групи № 2 з подіями по днях, годинах, темах і тренерах.</p>
+          <ul><li>Офіційне відкриття ХІI Всеукраїнської Літньої школи</li><li>Освітній батл</li><li>Проєкт «НаХаН»: тренінг прийняття рішень у стресових умовах. Командна гра зі сценарними вправами з безпечної взаємодії та домедичної підготовки</li></ul>
+          <a class="btn" href="schedule-group-2.html">Відкрити розклад групи № 2</a>
+        </article>
+    </section>
   </main>
 
   <footer class="footer container">
