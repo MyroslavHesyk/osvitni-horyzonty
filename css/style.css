@@ -1310,3 +1310,96 @@ input, select, textarea {
     border-radius: 20px;
   }
 }
+
+/* =======================================
+   Матеріали від спікерів
+======================================= */
+
+.speaker-materials{
+    background:#f9fbff;
+}
+
+.speaker-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+    gap:24px;
+    margin-top:40px;
+}
+
+.speaker-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:28px;
+    padding:28px;
+    box-shadow:var(--shadow-sm);
+    transition:.25s;
+    display:flex;
+    flex-direction:column;
+}
+
+.speaker-card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow);
+}
+
+.speaker-card__header h3{
+    color:var(--blue);
+    margin-bottom:10px;
+}
+
+.speaker-card__header p{
+    color:#50627a;
+    font-size:.96rem;
+    margin-bottom:14px;
+}
+
+.speaker-card__header small{
+    display:block;
+    color:#6f7f94;
+    line-height:1.55;
+    font-size:.88rem;
+}
+
+.speaker-links{
+    margin-top:22px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.speaker-links a{
+    display:block;
+    text-decoration:none;
+    padding:14px 18px;
+    border-radius:16px;
+    background:#eef6ff;
+    color:var(--blue);
+    font-weight:700;
+    border:1px solid rgba(10,50,112,.08);
+    transition:.2s;
+}
+
+.speaker-links a:hover{
+    background:linear-gradient(135deg,var(--blue),var(--green));
+    color:#fff;
+}
+
+@media(max-width:560px){
+
+    .speaker-grid{
+        grid-template-columns:1fr;
+        gap:16px;
+    }
+
+    .speaker-card{
+        padding:18px;
+        border-radius:18px;
+    }
+
+    .speaker-links a{
+        padding:12px 14px;
+        border-radius:14px;
+        font-size:.92rem;
+    }
+
+}
